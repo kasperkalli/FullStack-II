@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro - DeliveryApp</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><h2>🍔 DeliveryApp</h2></div>
+        <nav><ul><li><a href="index.html">Home</a></li></ul></nav>
+    </header>
+    <main style="padding: 50px; display: flex; justify-content: center;">
+        <form id="form-registro" class="card-producto" style="width: 400px;">
+            <h2>Registro de Usuario</h2>
+            <input type="text" id="nombre" placeholder="Nombre Completo" required style="width:100%; margin-top:10px; padding:5px;">
+            <input type="email" id="correo-reg" placeholder="Correo (@duoc.cl, @gmail.com)" required style="width:100%; margin-top:10px; padding:5px;">
+            <input type="password" id="pass-reg" placeholder="Contraseña (4-10 char)" required style="width:100%; margin-top:10px; padding:5px;">
+            <input type="password" id="pass-conf" placeholder="Confirmar Contraseña" required style="width:100%; margin-top:10px; padding:5px;">
+            <input type="text" id="telefono" placeholder="Teléfono (Opcional)" style="width:100%; margin-top:10px; padding:5px;">
+            
+            <select id="region" style="width:100%; margin-top:10px; padding:5px;"><option>Seleccione región</option></select>
+            <select id="comuna" style="width:100%; margin-top:10px; padding:5px;"><option>Seleccione comuna</option></select>
+            
+            <button type="submit" class="btn-primary" style="width:100%; margin-top:15px;">Registrar</button>
+        </form>
+    </main>
+    <footer><p>&copy; 2024 DeliveryApp</p></footer>
+    <script src="scripts/registro.js"></script>
+</body>
+</html>

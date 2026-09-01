@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeliveryApp - Tu comida favorita</title>
+    <!-- Enlace a la hoja de estilos externa -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <!-- Menú de Navegación -->
+    <header>
+        <div class="logo">
+            <h2>🍔 DeliveryApp</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#productos">Menú</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="login.html" class="btn-login">Iniciar Sesión</a>
+            <!-- Carrito de compras -->
+            <a href="carrito.html" class="cart-icon">
+                🛒 Carrito (<span id="cart-count">0</span>)
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección Principal (Hero) -->
+        <section class="hero">
+            <h1>Pide lo que se te ocurra, nosotros te lo llevamos</h1>
+            <p>Las mejores categorías de comida rápida, saludable y postres en un solo lugar.</p>
+            <a href="#productos" class="btn-primary">Ver Menú</a>
+        </section>
+
+        <!-- Sección de Productos -->
+        <section id="productos" class="productos-section">
+            <h2>Nuestras Categorías Especiales</h2>
+            <!-- El contenedor donde JS inyectará los productos -->
+            <div id="product-container" class="grid-productos">
+                <!-- Los productos se cargarán aquí dinámicamente -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer informativo -->
+    <footer>
+        <p>&copy; 2024 DeliveryApp - Desarrollo FullStack II. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Enlace al script externo -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Carrito - DeliveryApp</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><h2>🍔 DeliveryApp</h2></div>
+        <nav><ul><li><a href="index.html">Home</a></li></ul></nav>
+    </header>
+    <main style="padding: 50px;">
+        <h2>Mi carrito de compras</h2>
+        <section id="carrito-container" style="margin-top: 20px;">
+            <!-- Productos del LocalStorage se cargarán aquí -->
+        </section>
+        <div style="margin-top: 20px; font-size: 1.5rem; font-weight: bold;">
+            TOTAL: $<span id="total-precio">0</span>
+        </div>
+        <button class="btn-primary" style="margin-top: 20px; background-color: green;">PAGAR</button>
+    </main>
+    <footer><p>&copy; 2024 DeliveryApp</p></footer>
+    <script src="scripts/carrito.js"></script>
+</body>
+</html>
