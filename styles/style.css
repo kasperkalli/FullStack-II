@@ -1,141 +1,81 @@
-/* Reseteo básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* =========================================
+   style.css - DeliveryApp (Complemento Bootstrap 5)
+   ========================================= */
+
+/* Fuentes y Reseteo Básico */
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    background-color: #f8f9fa;
-    color: #333;
+/* =========================================
+   Componentes Públicos (Tienda)
+   ========================================= */
+
+/* Barra de Navegación */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Header y Navegación */
-header {
-    background-color: #ff4757;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-}
-
-header a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.user-actions {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-/* Sección Hero */
-.hero {
-    background-color: #2f3542;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.btn-primary {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 25px;
-    background-color: #ff4757;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.btn-primary:hover {
-    background-color: #ff6b81;
-}
-
-/* Grilla de Productos */
-.productos-section {
-    padding: 50px 5%;
-    text-align: center;
-}
-
-.productos-section h2 {
-    margin-bottom: 30px;
-    font-size: 2rem;
-}
-
-.grid-productos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-/* Tarjeta de Producto */
-.card-producto {
-    background: white;
+/* Tarjetas (Productos y Blogs) */
+.card {
     border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-.card-producto:hover {
-    transform: translateY(-5px);
-}
-
-.card-producto img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.card-producto h3 {
-    margin-bottom: 10px;
-}
-
-.card-producto .precio {
-    font-size: 1.2rem;
-    color: #2ed573;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.btn-add {
-    background-color: #1e90ff;
-    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
-    padding: 10px;
-    width: 100%;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
 }
 
-.btn-add:hover {
-    background-color: #3742fa;
+/* Efecto Hover para Tarjetas */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
 }
 
-/* Footer */
-footer {
-    background-color: #2f3542;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+/* Imágenes de las Tarjetas */
+.card-img-top, .card-img-left {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Botones */
+.btn {
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+
+.btn:hover {
+    transform: scale(1.02);
+}
+
+/* =========================================
+    Panel Administrador
+   ========================================= */
+
+/* Menú Lateral (Sidebar) */
+aside {
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+/* Efecto de selección en el menú lateral */
+aside .nav-link {
+    transition: background-color 0.2s, padding-left 0.2s;
+}
+
+aside .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: 20px; /* Pequeño efecto de desplazamiento */
+}
+
+/* Tablas del Administrador */
+.table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* =========================================
+    Utilidades Extras
+   ========================================= */
+
+/* Ajuste para resaltar el número del carrito */
+#cart-count {
+    font-size: 1.1rem;
 }

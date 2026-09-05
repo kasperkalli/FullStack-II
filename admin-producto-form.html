@@ -2,39 +2,36 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Admin - DeliveryApp</title>
-    <style>
-        body { display: flex; margin: 0; font-family: sans-serif; height: 100vh; }
-        .sidebar { width: 250px; background: #2f3542; color: white; padding: 20px; }
-        .sidebar a { display: block; color: white; text-decoration: none; margin-bottom: 15px; }
-        .content { flex: 1; padding: 40px; background: #f1f2f6; overflow-y: auto; }
-    </style>
+    <title>Dashboard - DeliveryApp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <aside class="sidebar">
-        <h2>Panel Admin</h2>
-        <nav>
-            <a href="admin-home.html">Dashboard</a>
-            <a href="admin-productos.html">Lista de Productos</a>
-            <a href="admin-producto-form.html">Nuevo Producto</a>
-            <a href="admin-usuarios.html">Lista de Usuarios</a>
-            <a href="admin-usuario-form.html">Nuevo Usuario</a>
-            <a href="index.html" style="margin-top: 50px; color: #ff4757;">← Ir a la Tienda</a>
+<body class="d-flex" style="height: 100vh; overflow: hidden;">
+    <aside class="bg-dark text-white p-3 d-flex flex-column" style="width: 250px;">
+        <h3 class="fw-bold mb-4 text-danger">Panel Admin</h3>
+        <nav class="nav flex-column gap-2">
+            <a class="nav-link text-white bg-danger rounded" href="admin-home.html">Dashboard</a>
+            <a class="nav-link text-white" href="admin-productos.html">Lista Productos</a>
+            <a class="nav-link text-white" href="admin-producto-form.html">Nuevo Producto</a>
+            <a class="nav-link text-white" href="admin-usuarios.html">Lista Usuarios</a>
+            <a class="nav-link text-white" href="admin-usuario-form.html">Nuevo Usuario</a>
         </nav>
+        <a href="index.html" class="btn btn-outline-light mt-auto">← Volver a Tienda</a>
     </aside>
-    <main class="content">
-        <h1>NUEVO PRODUCTO</h1>
-        <form style="display: flex; flex-direction: column; width: 400px; gap: 10px;">
-            <input type="text" placeholder="Código (Min 3)" required>
-            <input type="text" placeholder="Nombre (Max 100)" required>
-            <textarea placeholder="Descripción (Opcional, Max 500)"></textarea>
-            <input type="number" placeholder="Precio (Min 0)" required>
-            <input type="number" placeholder="Stock (Min 0)" required>
-            <input type="number" placeholder="Stock Crítico (Opcional)">
-            <select><option>Comida Rápida</option><option>Sushi</option></select>
-            <input type="file" title="Imagen">
-            <button type="submit" style="padding: 10px; background: black; color: white;">Guardar Producto</button>
-        </form>
+    <main class="flex-fill p-5 bg-light overflow-auto">
+        <h1 class="mb-4 fw-bold">Registrar Nuevo Producto</h1>
+        <div class="card shadow-sm p-4" style="max-width: 600px;">
+            <form>
+                <div class="mb-3"><input type="text" class="form-control" placeholder="Código (Min 3)" required></div>
+                <div class="mb-3"><input type="text" class="form-control" placeholder="Nombre (Max 100)" required></div>
+                <div class="mb-3"><textarea class="form-control" placeholder="Descripción (Max 500)"></textarea></div>
+                <div class="row g-3 mb-3">
+                    <div class="col"><input type="number" class="form-control" placeholder="Precio" required></div>
+                    <div class="col"><input type="number" class="form-control" placeholder="Stock" required></div>
+                </div>
+                <div class="mb-3"><select class="form-select"><option>Comida Rápida</option><option>Sushi</option></select></div>
+                <button type="submit" class="btn btn-danger w-100 fw-bold">Guardar Producto</button>
+            </form>
+        </div>
     </main>
 </body>
 </html>
